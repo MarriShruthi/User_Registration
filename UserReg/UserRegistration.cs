@@ -11,7 +11,7 @@ namespace UserReg
         public static void FName()
         {
             string regex = "[A-Z]{1}[a-z]{3,10}$";
-            Console.WriteLine("Enter your First Name :");
+            Console.WriteLine("Enter your First Name (First letter must be capital) :");
             string fName = Console.ReadLine();
             Regex rg = new Regex(regex);
           //  Match result = Regex.Match(fName, regex);
