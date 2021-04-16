@@ -11,15 +11,14 @@ namespace UserReg
         public static void FName()
         {
             string regex = "[A-Z]{1}[a-z]{3,10}$";
-            Console.WriteLine("Enter your First Name :");
-            string fName = Console.ReadLine();
+            Console.WriteLine("Enter your Last Name (First letter must be capital letter) :");
+            string lName = Console.ReadLine();
             Regex rg = new Regex(regex);
-          //  Match result = Regex.Match(fName, regex);
-            bool result1 = rg.IsMatch(fName);
-            if (result1 == true)
+            bool result = rg.IsMatch(lName);
+            if (result == true)
             {
                 Console.WriteLine("valid Input");
-                Console.WriteLine("your first name : " + fName);
+                Console.WriteLine("your last name : " + lName);
             }
             else
             {
