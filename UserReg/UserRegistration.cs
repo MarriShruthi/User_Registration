@@ -10,15 +10,15 @@ namespace UserReg
     {
         public static void FName()
         {
-            string regex = "[91]{2} [0-9]{10}";
-            Console.WriteLine("Enter your Phone Number (with country code 91)  :");
-            string PhNo = Console.ReadLine();
+            string regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#&$])(?=\\S+$).{4,10}$";
+            Console.WriteLine("Enter your Password :");
+            string password = Console.ReadLine();
             Regex rg = new Regex(regex);
-            bool result = rg.IsMatch(PhNo);
+            bool result = rg.IsMatch(password);
             if (result == true)
             {
                 Console.WriteLine("valid Input");
-                Console.WriteLine("your Phone Number is : " + PhNo);
+                Console.WriteLine("your Phone Number is : " + password);
             }
             else
             {
