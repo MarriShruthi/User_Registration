@@ -10,15 +10,15 @@ namespace UserReg
     {
         public static void FName()
         {
-            string regex = "[a-zA-Z0-9_.]+@[a-zA-Z.]+$";
-            Console.WriteLine("Enter your Mail Id :");
-            string Mail = Console.ReadLine();
+            string regex = "[91]{2} [0-9]{10}";
+            Console.WriteLine("Enter your Phone Number (with country code 91)  :");
+            string PhNo = Console.ReadLine();
             Regex rg = new Regex(regex);
-            bool result = rg.IsMatch(Mail);
+            bool result = rg.IsMatch(PhNo);
             if (result == true)
             {
                 Console.WriteLine("valid Input");
-                Console.WriteLine("your Mail Id is : " + Mail);
+                Console.WriteLine("your Phone Number is : " + PhNo);
             }
             else
             {
