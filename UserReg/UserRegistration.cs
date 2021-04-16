@@ -10,15 +10,15 @@ namespace UserReg
     {
         public static void FName()
         {
-            string regex = "[A-Z]{1}[a-z]{3,10}$";
-            Console.WriteLine("Enter your Last Name (First letter must be capital letter) :");
-            string lName = Console.ReadLine();
+            string regex = "[a-zA-Z0-9_.]+@[a-zA-Z.]+$";
+            Console.WriteLine("Enter your Mail Id :");
+            string Mail = Console.ReadLine();
             Regex rg = new Regex(regex);
-            bool result = rg.IsMatch(lName);
+            bool result = rg.IsMatch(Mail);
             if (result == true)
             {
                 Console.WriteLine("valid Input");
-                Console.WriteLine("your last name : " + lName);
+                Console.WriteLine("your Mail Id is : " + Mail);
             }
             else
             {
